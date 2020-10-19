@@ -6,6 +6,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "scripts": {
+    "start":"node index.js"
+  },
+  "engines": {
+    "node":"14.5.0"
+  },
   "dependencies": {
     "express": "^4.17.1"
   },

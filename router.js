@@ -2,7 +2,7 @@ const [{
     Server: h1
 }, x] = [require('http'), require('express')]; //modules http & express
 
-const apiRouter = require('./routes/api') //link to dir cause index.js
+const apiRouter = require('./routes/api'); //link to dir cause index.js
 const apiRouter2 = require('./routes/api2');
 
 const Router = x.Router();

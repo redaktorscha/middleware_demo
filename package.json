@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "node ./index.js"
+    "start": "node ./router.js"
   },
   "engines": {
     "node": "12.18.3"

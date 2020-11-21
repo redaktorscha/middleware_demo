@@ -2,7 +2,8 @@ const [{
     Server: h1
 }, x] = [require('http'), require('express')]; //modules http & express
 
-const apiRouter = require('./api') //link to dir cause index.js
+const apiRouter = require('./routes/api') //link to dir cause index.js
+const apiRouter2 = require('./routes/api2');
 
 const Router = x.Router();
 const PORT = 4321;
@@ -29,6 +30,7 @@ app
     .use(x.static('.'))
     .use('/', Router)
     .use('/api', apiRouter(x))
+    .use('/api2', apiRouter2(x))
     .get('/first', (req, res, next) => {
         if (req.query.error === 'yes') { //query: ?error=yes, next = next middlware func in stack, next arg == 'custom err'
             return next('internal server err');// next() => error 404 str 29; next('custom err') => error 500 str 30
